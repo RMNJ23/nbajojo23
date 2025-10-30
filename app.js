@@ -120,15 +120,13 @@ app.post("/login", async (req, res) => {
 
 // ✅ Protected Dashboard Route
 
-
-app.get('/dashboard', (req, res) => {
-    if (!req.session.user) {
-        return res.redirect('/login');
+app.get("/dashboard", (req, res) => {
+    if (!req.session.username) {
+        req.flash("message", "Please log in to access the dashboard");
+        return res.redirect("/");
     }
-
-    res.render('dashboard', { user: req.session.user });
+    res.render("dashboard", { username: req.session.username });
 });
-
 
 app.get("/logout", (req, res) => {
     req.session.destroy((err) => {
