@@ -7,26 +7,91 @@
     <script defer src="/script.js"></script>
 </head>
 
-<!--
 <style>
     body {
-        background-color: darkslategray;
-        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        color: #333;
     }
 
-    h1 {
-        color: darkorange;
-        text-decoration: underline;
-        padding-top: 1em;
-        font-size: 5em;
-        font-family: sans-serif;
-    }
-
-    button {
+    /* Navbar */
+    .navbar {
+        background: #2f3640;
         color: white;
-        background-color: blue;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-</style>-->
+
+    .navbar .btn {
+        background: #e84118;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+    /* Dashboard Layout */
+    .dashboard {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 1rem 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Sections */
+    .dashboard section {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .dashboard section:last-child {
+        border-bottom: none;
+    }
+
+    .welcome-section {
+        text-align: center;
+        background: linear-gradient(135deg, #74b9ff, #0984e3);
+        color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+
+    .info-section p,
+    .activity-section ul {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .activity-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .activity-section li {
+        background: #ecf0f1;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+        border-radius: 6px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        color: #888;
+        font-size: 0.9rem;
+    }
+</style>
+
+
 
 <body>
     <div class="container">
