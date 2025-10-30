@@ -67,7 +67,7 @@ a:hover {
 }*/
 
 
-<style>* {
+* {
     margin: 0;
     padding: 0;
 }
@@ -361,5 +361,3 @@ img {}
 /* Footer > Links */
 
 #links {}
-
-</style>
