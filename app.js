@@ -111,9 +111,16 @@ app.get("/dashboard", (req, res) => {
     res.render("dashboard", { username: req.session.user.username });
 });
 
+// Logout Route (POST)
 app.post("/logout", (req, res) => {
+    // Destroy the user session (log the user out)
     req.session.destroy((err) => {
-        if (err) console.error("❌ Logout error:", err);
+        if (err) {
+            console.error("❌ Logout error:", err);
+            // If something goes wrong, stay on the dashboard
+            return res.redirect("/dashboard");
+        }
+        // If logout succeeds, redirect to the homepage or login page
         res.redirect("/");
     });
 });

@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyApp Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 
 
@@ -100,7 +100,11 @@
         <h2>MyApp Dashboard</h2>
         <div class="nav-links">
             <span>Hello, <%= username %> 👋</span>
-            <a href="/logout" class="btn">Logout</a>
+
+            <!-- Proper logout form using POST -->
+            <form action="/logout" method="POST" style="display:inline;">
+                <button type="submit" class="btn logout-btn">Logout</button>
+            </form>
         </div>
     </nav>
 
