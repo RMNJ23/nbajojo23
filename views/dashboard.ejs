@@ -124,7 +124,7 @@
             <ul>
                 <li>✅ Logged in successfully</li>
                 <li>🔒 Account verified</li>
-                <li>📅 Member since: <%= new Date().toLocaleDateString() %>
+                <li>📅 Member since: <%= new Date(user.createdAt).toLocaleDateString() %>
                 </li>
             </ul>
         </section>
