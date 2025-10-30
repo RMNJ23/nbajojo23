@@ -55,12 +55,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // ✅ Routes
-app.get("/", (req, res) => {
-    res.render("index");
+// Login Page
+app.get('/login', (req, res) => {
+    res.render('login', { message: '' });
 });
 
-app.get("/signup", (req, res) => {
-    res.render("signup");
+// Signup Page
+app.get('/signup', (req, res) => {
+    res.render('signup', { message: '' });
 });
 
 app.post("/signup", async (req, res) => {
